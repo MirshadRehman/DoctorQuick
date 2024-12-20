@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "6135592488",
+    "project_id": "doctorquick-a9451",
+    "storage_bucket": "doctorquick-a9451.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6135592488:android:d7c49befbe5233f581a71d",
+        "android_client_info": {
+          "package_name": "com.example.doctorquick"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpDOA_4JhTc4IbXwnAk-1Pl5bVdSDwfJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

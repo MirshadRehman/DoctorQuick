@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DoctorQuick" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#135AA0</item>
+        <item name="android:statusBarColor">#2A629A</item>
+
+    </style>
+
+    <style name="Theme.DoctorQuick" parent="Base.Theme.DoctorQuick" />
+
+    <style name="ToolbarWhiteText" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="colorControlNormal">@android:color/white</item> <!-- This line changes the navigation icon color -->
+    </style>
+</resources>

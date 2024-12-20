@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DoctorQuick" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#135AA0</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:statusBarColor">#2A629A</item>
+        <item name="android:textColorPrimary">#202020</item>
+    </style>
+
+    <style name="ToolbarWhiteText" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="colorControlNormal">@android:color/white</item> <!-- This line changes the navigation icon color -->
+    </style>
+
+    <style name="TextViewDark" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">#000000</item>
+    </style>
+</resources>

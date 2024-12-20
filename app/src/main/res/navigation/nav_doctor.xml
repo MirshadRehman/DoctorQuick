@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_doctor"
+    app:startDestination="@id/dashboardDoctor">
+
+    <fragment
+        android:id="@+id/dashboardDoctor"
+        android:name="com.example.doctorquick.doctor.DashboardDoctor"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard_doctor" >
+        <action
+            android:id="@+id/action_dashboardDoctor_to_profileDoctor"
+            app:destination="@id/profileDoctor" />
+        <action
+            android:id="@+id/action_dashboardDoctor_to_dashboardAppointmentDoctor"
+            app:destination="@id/dashboardAppointmentDoctor" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileDoctor"
+        android:name="com.example.doctorquick.doctor.ProfileDoctor"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile_doctor">
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardAppointmentDoctor"
+        android:name="com.example.doctorquick.doctor.DashboardAppointmentDoctor"
+        android:label="Appointments Dashboard"
+        tools:layout="@layout/fragment_dashboard_appointment_doctor">
+        <argument
+            android:name="userId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_dashboardAppointmentDoctor_to_timeSlotNew"
+            app:destination="@id/timeSlotNew" />
+        <action
+            android:id="@+id/action_dashboardAppointmentDoctor_to_timeSlotAll"
+            app:destination="@id/timeSlotAll" />
+        <action
+            android:id="@+id/action_dashboardAppointmentDoctor_to_viewAllAppointments"
+            app:destination="@id/viewAllAppointments" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeSlotNew"
+        android:name="com.example.doctorquick.doctor.TimeSlotNew"
+        android:label="New Time Slot"
+        tools:layout="@layout/fragment_time_slot_new" />
+    <fragment
+        android:id="@+id/timeSlotAll"
+        android:name="com.example.doctorquick.doctor.TimeSlotAll"
+        android:label="All Time Slots"
+        tools:layout="@layout/fragment_time_slot_all">
+        <action
+            android:id="@+id/action_timeSlotAll_to_timeSlotUpdate"
+            app:destination="@id/timeSlotUpdate" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeSlotUpdate"
+        android:name="com.example.doctorquick.doctor.TimeSlotUpdate"
+        android:label="Update Time Slot"
+        tools:layout="@layout/fragment_time_slot_update" >
+        <argument
+            android:name="slotId"
+            app:argType="string" />
+        <argument
+            android:name="docId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewAllAppointments"
+        android:name="com.example.doctorquick.doctor.ViewAllAppointments"
+        android:label="View Appointments"
+        tools:layout="@layout/fragment_view_all_appointments" />
+</navigation>

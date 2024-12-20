@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">DoctorQuick</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="user_types">
+        <item>Doctor</item>
+        <item>Patient</item>
+    </string-array>
+
+    <string-array name="days">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+
+    <string-array name="available_at">
+        <item>Hospital</item>
+        <item>Clinic</item>
+    </string-array>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_patient"
+    app:startDestination="@id/dashboardPatient">
+
+    <fragment
+        android:id="@+id/dashboardPatient"
+        android:name="com.example.doctorquick.patient.DashboardPatient"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard_patient">
+        <action
+            android:id="@+id/action_dashboardPatient_to_profilePatient"
+            app:destination="@id/profilePatient" />
+        <action
+            android:id="@+id/action_dashboardPatient_to_dashboardAppointmentPatient"
+            app:destination="@id/dashboardAppointmentPatient" />
+        <action
+            android:id="@+id/action_dashboardPatient_to_viewAllDoctors"
+            app:destination="@id/viewAllDoctors" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePatient"
+        android:name="com.example.doctorquick.patient.ProfilePatient"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile_patient" >
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardAppointmentPatient"
+        android:name="com.example.doctorquick.patient.appointments.DashboardAppointmentPatient"
+        android:label="Appointments Dashboard"
+        tools:layout="@layout/fragment_dashboard_appointment_patient" >
+        <action
+            android:id="@+id/action_dashboardAppointmentPatient_to_doctorAppointmentNew"
+            app:destination="@id/doctorAppointmentNew" />
+        <action
+            android:id="@+id/action_dashboardAppointmentPatient_to_doctorAppointmentViewAll"
+            app:destination="@id/doctorAppointmentViewAll" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorAppointmentNew"
+        android:name="com.example.doctorquick.patient.appointments.DoctorAppointmentNew"
+        android:label="New Appointment"
+        tools:layout="@layout/fragment_doctor_appointment_new" />
+    <fragment
+        android:id="@+id/doctorAppointmentViewAll"
+        android:name="com.example.doctorquick.patient.appointments.DoctorAppointmentViewAll"
+        android:label="View All Appointments"
+        tools:layout="@layout/fragment_doctor_appointment_view_all" />
+    <fragment
+        android:id="@+id/viewAllDoctors"
+        android:name="com.example.doctorquick.patient.ViewAllDoctors"
+        android:label="All Doctors"
+        tools:layout="@layout/fragment_view_all_doctors" >
+        <action
+            android:id="@+id/action_viewAllDoctors_to_viewIndividualDoctor"
+            app:destination="@id/viewIndividualDoctor" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewIndividualDoctor"
+        android:name="com.example.doctorquick.patient.ViewIndividualDoctor"
+        android:label="Doctor Profile"
+        tools:layout="@layout/fragment_view_individual_doctor">
+        <argument
+            android:name="doctorId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardAmbulance"
+        android:name="com.example.doctorquick.patient.ambulance.DashboardAmbulance"
+        android:label="Ambulance Dashboard"
+        tools:layout="@layout/fragment_dashboard_ambulance" >
+        <action
+            android:id="@+id/action_dashboardAmbulance_to_bookingNewAmbulance"
+            app:destination="@id/bookingNewAmbulance" />
+        <action
+            android:id="@+id/action_dashboardAmbulance_to_viewAllAmbulanceBooking"
+            app:destination="@id/viewAllAmbulanceBooking" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookingNewAmbulance"
+        android:name="com.example.doctorquick.patient.ambulance.BookingNewAmbulance"
+        android:label="Ambulance Booking"
+        tools:layout="@layout/fragment_booking_new_ambulance" >
+        <argument
+            android:name="ambulanceNo"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_bookingNewAmbulance_to_dashboardAmbulance"
+            app:destination="@id/dashboardAmbulance"
+            app:popUpTo="@id/dashboardAmbulance"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewAllAmbulanceBooking"
+        android:name="com.example.doctorquick.patient.ambulance.ViewAllAmbulanceBooking"
+        android:label="View All Booking"
+        tools:layout="@layout/fragment_view_all_ambulance_booking" />
+</navigation>
